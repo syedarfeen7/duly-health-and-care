@@ -1,0 +1,26 @@
+
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header-btn{
+    color: #002855;
+    font-weight: 700;
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+}
+.header-bottom-text{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 2rem;
+    align-items: center;
+}
+.header-bottom-text p{
+    font-size: 24px;
+    margin-left: .5rem;
+}
