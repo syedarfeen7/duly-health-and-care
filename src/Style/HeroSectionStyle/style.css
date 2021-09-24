@@ -1,16 +1,18 @@
-
-.hero-banner-image-wrapper img{
+.hero-banner-image-wrapper img {
     width: 100%;
 }
-.hero-banner-image-wrapper{
+
+.hero-banner-image-wrapper {
     margin-top: 2rem;
     margin-left: 3rem;
 }
-.seminar-location-wrapper{
+
+.seminar-location-wrapper {
     margin-top: 2rem;
     margin-left: 3rem;
 }
-.seminar-location-wrapper h3{
+
+.seminar-location-wrapper h3 {
     font-size: 24px;
     border-left: 5px solid #00A5DF;
     color: #fff;
