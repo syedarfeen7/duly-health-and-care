@@ -11,6 +11,7 @@
     --weight: 700;
     --black: #000000;
     --grey: #525757;
+    --green : #78BE21;
 }
 
 .font-blue {
@@ -25,6 +26,9 @@
 }
 .font-grey{
     color: var(--grey);
+}
+.font-green{
+    color: var(--green);
 }
 
 .background-color-blue {
