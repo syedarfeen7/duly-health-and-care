@@ -9,6 +9,8 @@
 :root {
     --blue: #002855;
     --weight: 700;
+    --black: #000000;
+    --grey: #525757;
 }
 
 .font-blue {
@@ -18,8 +20,13 @@
 .font-weight-700 {
     font-weight: var(--weight);
 }
+.font-black{
+    color: var(--black);
+}
+.font-grey{
+    color: var(--grey);
+}
 
 .background-color-blue {
     background-color: var(--blue);
-    padding: 2rem;
 }
