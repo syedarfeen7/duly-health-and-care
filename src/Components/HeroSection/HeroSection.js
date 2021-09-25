@@ -1,5 +1,6 @@
 import { Container, Grid } from "@mui/material";
-import '../../Style/HeroSectionStyle/style.css'
+import '../../Style/HeroSectionStyle/style.css';
+import '../../Style/GeneralizeStyle/style.css';
 export default function HeroSection() {
     return <>
         <Grid container>
