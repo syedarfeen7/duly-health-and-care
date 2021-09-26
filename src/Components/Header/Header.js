@@ -1,7 +1,17 @@
 import { Container, Grid } from "@mui/material";
 import '../../Style/HeaderStyling/style.css';
 import '../../Style/GeneralizeStyle/style.css';
+import { useLocation } from "react-router";
+import { useState, useEffect } from "react";
 export default function Header() {
+    const location = useLocation();
+    const [isRegisterPage, setIsRegisterPage] = useState(false)
+
+    useEffect(() => {
+        if (location.pathname === "/duly-register") {
+            setIsRegisterPage(true)
+        }
+    }, [])
     return <>
 
         <Grid container>
@@ -10,16 +20,25 @@ export default function Header() {
                     <div className="header-wrapper">
 
                         <div className="brand-logo">
-                            <img src="/images/brand-logo.png" alt="brand-logo"/>
+                            <img src="/images/brand-logo.png" alt="brand-logo" />
                         </div>
                         <div>
                             <input type="button" className="header-btn" value="Register By Phone: 1-855-433-4070" />
                         </div>
                     </div>
-                    <div className="header-bottom-text background-color-blue">
-                        <img src="/images/Vector.png" alt="bell-icon" />
-                        <p className="font-weight-700">Medicare Annual Enrollment Period Starts October 1st</p>
-                    </div>
+                    {isRegisterPage ?
+                        <></>
+                        :
+
+                        <>
+
+                            <div className="header-bottom-text background-color-blue">
+                                <img src="/images/Vector.png" alt="bell-icon" />
+                                <p className="font-weight-700">Medicare Annual Enrollment Period Starts October 1st</p>
+                            </div>
+                        </>
+                    }
+
                 </header>
             </Grid>
         </Grid>
