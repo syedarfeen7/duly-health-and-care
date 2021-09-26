@@ -12,6 +12,7 @@
     --black: #000000;
     --grey: #525757;
     --green: #78BE21;
+    --red: red;
 }
 
 .font-blue {
@@ -36,6 +37,10 @@
 
 .background-color-blue {
     background-color: var(--blue);
+}
+.red-text{
+    color: var(--red);
+    font-weight: 700;
 }
 
 .background-image {

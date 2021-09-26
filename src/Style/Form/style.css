@@ -10,11 +10,10 @@
     font-size: 36px;
     margin-bottom: 1rem;
 }
-.seminar-type-btns{
-    margin-top: 2rem;
+.seminar-day-wrapper     h1{
+    margin-top: 1rem;
 }
 .seminar-type-wrapper input{
-    padding: 1rem 0rem;
     width: 90%;
     color: #002855;
     border: 2px solid #002855;
@@ -35,9 +34,7 @@
     line-height: 30px;
     cursor: pointer;
 }
-.seminar-day-wrappper{
-    margin-top: 2rem;
-}
+
 
 .seminar-time-wrapper h1{
     margin-top: 2rem;
@@ -46,6 +43,7 @@
     margin-top: 2rem;
 }
 .seminar-timing-btns-wrapper input{
+    margin-bottom: 1rem !important;
     width: 90%;
     padding: 1rem 0rem;
 }
@@ -71,6 +69,43 @@
     border: none;
     cursor: pointer;
 }
+
+.labl>input {
+    /* HIDE RADIO */
+    visibility: hidden;
+    /* Makes input not-clickable */
+    /* position: absolute; */
+    /* Remove input from document flow */
+}
+
+.labl>input+div {
+    text-align: center;
+    width: 90%;
+    cursor: pointer;
+    border: 2px solid #002855;
+    border-radius: 5px;
+    background-color: #ffff;
+}
+
+.labl>input+div p {
+    font-family: "Open Sans", sans-serif;
+}
+
+.labl>input:checked+div>p{
+    /* (RADIO CHECKED) DIV STYLES */
+    background-color: #002855;
+    transition: 0.5s ease all;
+    color: #fff !important;
+}
+
+.radio-option-text {
+    font-family: "Open Sans", sans-serif;
+    color: #002855;
+    padding: 1rem 0rem;
+    font-weight: 400;
+    font-size: 24px;
+}
+
 
 /* SEMINAR REGISTER PAGE STYLING START HERE */
 .border-top{
@@ -133,23 +168,22 @@
     }
 }
 @media only screen and (max-width: 899px){
-    .seminar-type-wrapper input, .seminar-timing-btns-wrapper input{
+    .labl>input+div, .seminar-timing-btns-wrapper input{
         width: 60%;
-        margin-bottom: 1rem;
     }
     .seminar-details-form{
         margin-right: 1rem;        
     }
 }
 @media only screen and (max-width: 708px){
-    .seminar-type-wrapper h1, .seminar-time-wrapper h1{
-        display: flex;
-        justify-content: center !important;
+    .labl>input+div{
+        margin: auto ;
     }
-    .seminar-type-wrapper .center, .seminar-time-wrapper .center{
+    .seminar-time-wrapper .center{
         display: flex;
         justify-content: center;
     }
+
 }
 @media only screen and (max-width: 651px){
     .seminar-details-form{
@@ -157,9 +191,8 @@
     }
  }
 @media only screen and (max-width: 510px){
-    .seminar-type-wrapper input, .seminar-timing-btns-wrapper input{
+    .labl>input+div, .seminar-timing-btns-wrapper input{
         width: 90%;
-        margin-bottom: 1rem;
     }
 }
 @media only screen and (max-width: 436px){
