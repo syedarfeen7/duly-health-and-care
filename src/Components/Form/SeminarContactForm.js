@@ -47,6 +47,7 @@ export default function SeminarContactForm() {
                     <div className="seminar-register-heading">
                         <h1 className="font-grey font-weight-700">Seminar Registration</h1>
                     </div>
+                    
                     <div className="contact-form">
                         <h3 className="font-grey font-weight-700 contact-info-head">Contact Information</h3>
                         
