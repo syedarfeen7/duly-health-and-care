@@ -33,7 +33,7 @@ export default function HeroSection() {
                 </div>
             </Grid>
             <Grid item xl={6} lg={6} md={6} sm={12} xs={12}>
-                <div className="seminar-location-wrapper">
+                <div className="seminar-location-wrapper hide-grid">
                     <h3 className="background-color-blue font-weight-700">
                         Seminar Locations
                     </h3>

@@ -11,7 +11,7 @@
     --weight: 700;
     --black: #000000;
     --grey: #525757;
-    --green : #78BE21;
+    --green: #78BE21;
 }
 
 .font-blue {
@@ -21,16 +21,32 @@
 .font-weight-700 {
     font-weight: var(--weight);
 }
-.font-black{
+
+.font-black {
     color: var(--black);
 }
-.font-grey{
+
+.font-grey {
     color: var(--grey);
 }
-.font-green{
+
+.font-green {
     color: var(--green);
 }
 
 .background-color-blue {
     background-color: var(--blue);
+}
+
+.background-image {
+    margin: 20rem 0rem;
+    width: 100%;
+    background-image: url('../../ImagesInsideSrc/image.png');
+    height: 240px;
+}
+
+@media only screen and (max-width: 899px) {
+    .hide-grid {
+        display: none;
+    }
 }

@@ -10,8 +10,21 @@ export default function SeminarDetailForm() {
                     <form className="seminar-details-form">
                         <div className="seminar-type-wrapper">
                             <h1 className="font-blue font-weight-700">Select Your Seminar Type</h1>
-                            <input type="button" value="Online Seminar" />
-                            <input type="button" className="btn-two" value="In-Person Seminar" />
+                            <Grid container>
+                                <Grid xl={4} lg={4} md={5} sm={12} xs={12} item className="center">
+                                    <input type="button" value="Online Seminar" />
+
+                                </Grid>
+                                <Grid xl={4} lg={4} md={5} sm={12} xs={12} item className="center">
+
+                                    <input type="button" className="btn-two" value="In-Person Seminar" />
+
+                                </Grid>
+                                <Grid xl={4} lg={4} md={2} sm={12} xs={12} item>
+
+                                </Grid>
+
+                            </Grid>
                         </div>
                         <div className="seminar-details-location-wrapper">
                             <h1 className="font-blue font-weight-700 ">Select Your Seminar Location</h1>
@@ -26,20 +39,44 @@ export default function SeminarDetailForm() {
                         <div className="seminar-type-wrapper seminar-day-wrappper">
                             <h1 className="font-blue font-weight-700">Select Your Seminar Day</h1>
                             <div className="seminar-type-btns">
+                                <Grid container>
 
-                            <input type="button" value="Tuesday" />
-                            <input type="button" className="btn-two" value="Thursdays" />
+                                    <Grid xl={4} lg={4} md={5} sm={12} xs={12} item className="center">
+
+                                        <input type="button" value="Tuesday" />
+                                    </Grid>
+                                    <Grid xl={4} lg={4} md={5} sm={12} xs={12} item className="center">
+
+                                        <input type="button" className="btn-two" value="Thursdays" />
+
+                                    </Grid>
+                                    <Grid xl={4} lg={4} md={2} sm={12} xs={12} item>
+
+                                    </Grid>
+                                </Grid>
                             </div>
                         </div>
 
                         <div className="seminar-time-wrapper">
                             <h1 className="font-blue font-weight-700 ">Select Your Seminar Time</h1>
                             <div className="seminar-timing-btns-wrapper">
-                                <input type="button" className="time-btn font-weight-700" value="October 5th @ 6:00 PM" />
-                                <input type="button" className="seats-btn font-weight-700" value="15 Open Seats" />
-                                <Link to={{pathname:'/duly-register'}}>
-                                <input type="button" className="register-btn font-weight-700" value="Register" />
-                                </Link>
+                                <Grid container>
+                                    <Grid xl={4} lg={4} md={4} xs={12} className="center">
+
+                                        <input type="button" className="time-btn font-weight-700" value="October 5th @ 6:00 PM" />
+
+                                    </Grid>
+                                    <Grid xl={4} lg={4} md={4} xs={12} className="center">
+
+
+                                        <input type="button" className="seats-btn font-weight-700" value="15 Open Seats" />
+                                    </Grid>
+                                    <Grid xl={4} lg={4} md={4} xs={12} className="center">
+
+
+                                        <input type="button" className="register-btn font-weight-700" value="Register" />
+                                    </Grid>
+                                </Grid>
 
                             </div>
                         </div>

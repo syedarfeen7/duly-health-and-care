@@ -23,7 +23,8 @@ export default function Header() {
                             <img src="/images/brand-logo.png" alt="brand-logo" />
                         </div>
                         <div>
-                            <input type="button" className="header-btn" value="Register By Phone: 1-855-433-4070" />
+                            <h3 className="header-btn">Register By Phone: 1-855-433-4070</h3>
+
                         </div>
                     </div>
                     {isRegisterPage ?
@@ -34,7 +35,7 @@ export default function Header() {
 
                             <div className="header-bottom-text background-color-blue">
                                 <img src="/images/Vector.png" alt="bell-icon" />
-                                <p className="font-weight-700">Medicare Annual Enrollment Period Starts October 1st</p>
+                                <p className="font-weight-700 header-text">Medicare Annual Enrollment Period Starts October 1st</p>
                             </div>
                         </>
                     }
