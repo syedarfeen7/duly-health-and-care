@@ -23,6 +23,13 @@
     padding: 1.4rem;
 
 }
+.seminar-location-wrapper p{
+    cursor: pointer;
+    transition: 0.2s ease all;
+}
+.seminar-location-wrapper p:hover{
+    color: #78BE21;
+}
 
 .seminar-location {
     font-size: 24px;

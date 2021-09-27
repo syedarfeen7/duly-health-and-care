@@ -8,6 +8,10 @@ export const seminarDetialsScheema = yup.object().shape({
 
 })
 
+export const seminarLocationScheema = yup.object().shape({
+    seminarLocation: yup.string().required("Please select any one seminar location")
+})
+
 // SEMINAR CONTACT DETAILS VALIDATION SCHEEMA
 export const seminarContactDetailsScheema = yup.object().shape({
     firstName: yup.string().required("Please enter your first name"),

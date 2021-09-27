@@ -18,15 +18,17 @@ export default function SeminarContactForm() {
     const [seminarTime, setSeminarTime] = useState('');
     const [seminarType, setSeminarType] = useState('');
     const [seminarDay, setSeminarDay] = useState('');
+    const [seminarLocation, setSeminarLocation] = useState('');
 
     const gettingSeminarDetailsFromStore = () => {
         setSeminarTime(seminarDetails.seminarTime)
         setSeminarType(seminarDetails.seminarType)
         setSeminarDay(seminarDetails.seminarDay)
+        setSeminarLocation(seminarDetails.seminarLocation)
     }
     const saveSemainarContactDetials = async (e) => {
         e.preventDefault()
-        let data = {firstName, lastName, email, seminarDay, seminarTime, seminarType}
+        let data = {firstName, lastName, email, seminarDay,seminarLocation, seminarTime, seminarType}
         console.log(data)
         await seminarContactDetailsScheema.strict().validate(data)
             .then(res => {
