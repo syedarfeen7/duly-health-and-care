@@ -14,15 +14,18 @@
     border: none;
     text-align: center;
 }
-.header-btn-with-phone{
+
+.header-btn-with-phone {
     background-color: #470A68;
     color: #fff;
     padding: 1rem 2rem;
     text-align: center;
 }
-.header-btn-with-phone img{
+
+.header-btn-with-phone img {
     margin-right: 10px;
 }
+
 .header-bottom-text {
     color: #fff;
     display: flex;
@@ -43,12 +46,14 @@
     }
 
 }
+
 @media only screen and (max-width: 568px) {
     .display-none {
         display: none;
     }
 
 }
+
 @media only screen and (min-width: 569px) {
     .header-btn-with-phone {
         display: none;
