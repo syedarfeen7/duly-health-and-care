@@ -181,9 +181,7 @@
     }
 }
 @media only screen and (max-width: 899px){
-    .labl>input+div, .seminar-timing-btns-wrapper input, .seminar-timing-btns-wrapper .labl>input+div{
-        width: 60% !important;
-    }
+    
     .seminar-details-form{
         margin-right: 1rem;        
     }
@@ -202,8 +200,11 @@
         display: flex;
         justify-content: center;
     }
-    .seminar-timing-btns-wrapper .labl>input+div{
+    /* .seminar-timing-btns-wrapper .labl>input+div{
         width: 60% !important;
+    } */
+    .labl>input+div, .seminar-timing-btns-wrapper input, .seminar-timing-btns-wrapper .labl>input+div{
+        width: 90% !important;
     }
 
 }
