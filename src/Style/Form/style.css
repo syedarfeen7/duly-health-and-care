@@ -259,6 +259,11 @@
     .seats-btn {
         margin-top: 1rem;
     }
+    .seminar-details-location-wrapper, .seminar-day-wrapper, .seminar-time-wrapper{
+        margin-top: 2rem;
+        border-top: 1px solid #00A5DF;
+    }
+
 
     .seminar-timing-btns-wrapper input,
     .seminar-timing-btns-wrapper .labl {

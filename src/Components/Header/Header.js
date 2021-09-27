@@ -23,7 +23,11 @@ export default function Header() {
                             <img src="/images/brand-logo.png" alt="brand-logo" />
                         </div>
                         <div>
-                            <h3 className="header-btn">Register By Phone: 1-855-433-4070</h3>
+                            <h3 className="header-btn display-none">Register By Phone: 1-855-433-4070</h3>
+                            <h3 className="header-btn-with-phone">
+                                <img src="/images/phone.png" alt="phone"/>
+                                855-433-4070
+                            </h3>
 
                         </div>
                     </div>

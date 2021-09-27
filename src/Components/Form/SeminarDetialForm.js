@@ -226,8 +226,6 @@ export default function SeminarDetailForm() {
                                             <Grid xl={4} lg={4} md={2} sm={12} xs={12} item></Grid>
                                         </>
                                         :
-
-
                                         <>
 
                                             <Grid xl={4} lg={4} md={5} sm={12} xs={12} item className="center">
