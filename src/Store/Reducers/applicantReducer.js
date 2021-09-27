@@ -1,19 +1,10 @@
-import { applicantRegisteration, applicantSeminarDetails } from '../Actions/applicantAction';
+import { applicantRegisteration, applicantSeminarDetails , seminarAvailableTimings} from '../Actions/applicantAction';
 const initialState = {
     seminar_timings: [''],
     applicant_seminar_details: [''],
     applicant_registeration: [''],
     seminar_location: [''],
-    seminar_available_timings: [
-        {
-        seminarTime: 'October 5th @ 6:00 PM',
-        seminarSeats: '15 Open Seats',
-        },
-        {
-        seminarTime: 'October 5th @ 6:00 PM',
-        seminarSeats: '15 Open Seats',
-        }
-]
+    seminar_available_timings: ['']
 }
 
 export default function ApplicantReducer(state = initialState, action) {
@@ -22,6 +13,8 @@ export default function ApplicantReducer(state = initialState, action) {
             return { ...state, applicant_registeration: action.data }
         case applicantSeminarDetails:
             return { ...state, applicant_seminar_details: action.data }
+        case seminarAvailableTimings:
+            return{...state, seminar_available_timings: action.data}
         default:
             return { ...state }
     }

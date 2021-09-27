@@ -4,9 +4,10 @@ import '../../Style/Form/style.css';
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {seminarDetialsScheema} from '../../Helper/Validator/validation';
-import {ApplicantSeminarDetails} from '../../Store/Actions/applicantAction';
+import { seminarDetialsScheema } from '../../Helper/Validator/validation';
+import { ApplicantSeminarDetails, SeminarTimings } from '../../Store/Actions/applicantAction';
 import { useHistory } from "react-router";
+
 export default function SeminarDetailForm() {
     const history = useHistory()
     const dispatch = useDispatch()
@@ -14,20 +15,54 @@ export default function SeminarDetailForm() {
     const [seminarLocation, setSeminarLocation] = useState('');
     const [seminarDay, setSeminarDay] = useState('');
     const [seminarTime, setSeminarTime] = useState('');
-    const [timings, setTiming] = useState('')
+    const [timings, setTiming] = useState([])
+    let availableTimings = [
+        {
+            seminarTime: 'October 5th @ 6:00 PM',
+            seminarSeats: '15 Open Seats'
+        },
+        {
+            seminarTime: 'October 7th @ 6:00 PM',
+            seminarSeats: '15 Open Seats'
+        },
+        {
+            seminarTime: 'October 12th @ 6:00 PM',
+            seminarSeats: '15 Open Seats'
+        },
+        {
+            seminarTime: 'October 14th @ 6:00 PM',
+            seminarSeats: '15 Open Seats'
+        },
+        {
+            seminarTime: 'October 19th @ 6:00 PM',
+            seminarSeats: '15 Open Seats'
+        },
+        {
+            seminarTime: 'October 21st @ 6:00 PM',
+            seminarSeats: '15 Open Seats'
+        },
+        {
+            seminarTime: 'October 19th @ 6:00 PM',
+            seminarSeats: '15 Open Seats'
+        },
+        {
+            seminarTime: 'October 21st @ 6:00 PM',
+            seminarSeats: '15 Open Seats'
+        },
+    ]
+    let seminarTimings = useSelector(state => state.seminar_available_timings)
     useEffect(() => {
         gettingSeminarTimings()
+        dispatch(SeminarTimings(availableTimings))
     }, [])
-    const seminarTimings = useSelector(state => state.seminar_available_timings)
+    console.log(seminarTimings)
     const gettingSeminarTimings = () => {
-            setTiming(seminarTimings)
+        setTiming(seminarTimings)
     }
-    // console.log(timings)
-    // console.log(timings.map(a => {console.log(a.seminarTime)}))
 
-    const saveSeminarDetails =  async(e) => {
-        e.preventDefault() 
-        let data ={seminarType, seminarDay, seminarLocation, seminarTime}
+    const saveSeminarDetails = async (e) => {
+        e.preventDefault()
+        let data = { seminarType, seminarDay, seminarLocation, seminarTime }
         console.log(data)
         await seminarDetialsScheema.strict().validate(data)
             .then(res => {
@@ -53,7 +88,7 @@ export default function SeminarDetailForm() {
                             <Grid container>
                                 <Grid xl={4} lg={4} md={5} sm={12} xs={12} item className="center">
                                     <label className="labl">
-                                        <input type="radio" name="type" value="Online" onClick={(e) => {setSeminarType(e.target.value)}}/>
+                                        <input type="radio" name="type" value="Online" onClick={(e) => { setSeminarType(e.target.value) }} />
                                         <div>
                                             <p className="main-section-font-color radio-option-text">Online</p>
                                         </div>
@@ -61,7 +96,7 @@ export default function SeminarDetailForm() {
                                 </Grid>
                                 <Grid xl={4} lg={4} md={5} sm={12} xs={12} item className="center">
                                     <label className="labl">
-                                        <input type="radio" name="type" value="In-Person Seminar" onClick={(e) => {setSeminarType(e.target.value)}}/>
+                                        <input type="radio" name="type" value="In-Person Seminar" onClick={(e) => { setSeminarType(e.target.value) }} />
                                         <div>
                                             <p className="main-section-font-color radio-option-text">In-Person Seminar</p>
                                         </div>
@@ -90,13 +125,13 @@ export default function SeminarDetailForm() {
                             <h1 className="font-blue font-weight-700">Select Your Seminar Day</h1>
                             <div id="seminarDay" className="red-text error-msg"></div>
                             <div className="seminar-type-btns">
+
                                 <Grid container>
-                                    {/* {timings.map(a => 
-                                        console.log(a.seminarTime)
-                                    )} */}
+
+
                                     <Grid xl={4} lg={4} md={5} sm={12} xs={12} item className="center">
                                         <label className="labl">
-                                            <input type="radio" name="day" value="Tuesday" onClick={(e) => {setSeminarDay(e.target.value)}} />
+                                            <input type="radio" name="day" value="Tuesday" onClick={(e) => { setSeminarDay(e.target.value) }} />
                                             <div>
                                                 <p className="main-section-font-color radio-option-text">Tuesday</p>
                                             </div>
@@ -104,7 +139,7 @@ export default function SeminarDetailForm() {
                                     </Grid>
                                     <Grid xl={4} lg={4} md={5} sm={12} xs={12} item className="center">
                                         <label className="labl">
-                                            <input type="radio" name="day" value="Thursday" onChange={(e) => {setSeminarDay(e.target.value)}}/>
+                                            <input type="radio" name="day" value="Thursday" onChange={(e) => { setSeminarDay(e.target.value) }} />
                                             <div>
                                                 <p className="main-section-font-color radio-option-text">Thursday</p>
                                             </div>
@@ -121,23 +156,29 @@ export default function SeminarDetailForm() {
                             <h1 className="font-blue font-weight-700 ">Select Your Seminar Time</h1>
                             <div id="seminarTime" className="red-text error-msg"></div>
                             <div className="seminar-timing-btns-wrapper">
-                                <Grid container>
-                                    <Grid xl={4} lg={4} md={4} xs={12} className="center">
+                                    {timings.map(a =>
+                                <Grid container className="seminar-time-seat-register--wrapper">
+                                        
+                                            <Grid item xl={4} lg={4} md={4} xs={12} className="center">
+                                                <label className="labl">
+                                                    <input type="radio" name="time" value="Tuesday" onClick={(e) => { setSeminarTime(e.target.value) }} />
+                                                    <div className="time">
+                                                        <p className="main-section-font-color radio-option-text">{a.seminarTime}</p>
+                                                    </div>
+                                                </label>
 
-                                        <input type="button" label="fifteen" className="time-btn font-weight-700" value="October 5th @ 6:00 PM" onClick={(e) => {setSeminarTime(e.target.value)}}/>
-
-                                    </Grid>
-                                    <Grid xl={4} lg={4} md={4} xs={12} className="center">
+                                            </Grid>
+                                            <Grid item xl={4} lg={4} md={4} xs={12} className="center">
 
 
-                                        <input type="button" className="seats-btn font-weight-700" value="15 Open Seats" />
-                                    </Grid>
-                                    <Grid xl={4} lg={4} md={4} xs={12} className="center">
-
-
-                                        <input type="button" className="register-btn font-weight-700" value="Register" onClick={saveSeminarDetails}/>
-                                    </Grid>
+                                                <input type="button" className="seats-btn font-weight-700" value={a.seminarSeats} />
+                                            </Grid>
+                                            <Grid item xl={4} lg={4} md={4} xs={12} className="center">
+                                                <input type="button" className="register-btn font-weight-700" value="Register" onClick={saveSeminarDetails} />
+                                            </Grid>
+                                        
                                 </Grid>
+                                    )}
 
                             </div>
                         </div>

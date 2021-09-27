@@ -42,10 +42,13 @@
 .seminar-timing-btns-wrapper{
     margin-top: 2rem;
 }
-.seminar-timing-btns-wrapper input{
+.seminar-timing-btns-wrapper input, .seminar-timing-btns-wrapper .labl {
     margin-bottom: 1rem !important;
     width: 90%;
     padding: 1rem 0rem;
+}
+.seminar-time-seat-register--wrapper{
+    margin-bottom: 2rem;
 }
 .time-btn{
     background-color: transparent;
@@ -60,11 +63,13 @@
     color: #fff;
     font-size: 24px;
     border: none;
+    margin-top: 2rem;
     cursor: pointer;
 }
 .register-btn{
     background-color: #470A68;
     color: #fff;
+    margin-top: 2rem;
     font-size: 24px;
     border: none;
     cursor: pointer;
@@ -87,6 +92,7 @@
     background-color: #ffff;
 }
 
+
 .labl>input+div p {
     font-family: "Open Sans", sans-serif;
 }
@@ -97,9 +103,16 @@
     transition: 0.5s ease all;
     color: #fff !important;
 }
-
+.labl>input:checked+.time>p{
+    color: #470A68 !important;
+    background-color: transparent !important;
+}
+.labl>input:checked+.time{
+    border: 2px solid #470A68 !important;
+}
 .radio-option-text {
     font-family: "Open Sans", sans-serif;
+    transition: 0.5s ease all;
     color: #002855;
     padding: 1rem 0rem;
     font-weight: 400;
@@ -163,25 +176,34 @@
 
 /* MEDIA QUERY */
 @media only screen and (max-width: 1100px){
-    .seminar-timing-btns-wrapper input {
+    .seminar-timing-btns-wrapper input, .seminar-timing-btns-wrapper .labl p {
         font-size: 18px;
     }
 }
 @media only screen and (max-width: 899px){
-    .labl>input+div, .seminar-timing-btns-wrapper input{
-        width: 60%;
+    .labl>input+div, .seminar-timing-btns-wrapper input, .seminar-timing-btns-wrapper .labl>input+div{
+        width: 60% !important;
     }
     .seminar-details-form{
         margin-right: 1rem;        
     }
+    .register-btn, .seats-btn{
+        margin-top: 1rem;
+    }
+    .seminar-timing-btns-wrapper input, .seminar-timing-btns-wrapper .labl {
+        margin-bottom: 0rem !important;
+    }
 }
 @media only screen and (max-width: 708px){
     .labl>input+div{
-        margin: auto ;
+        margin: auto;
     }
     .seminar-time-wrapper .center{
         display: flex;
         justify-content: center;
+    }
+    .seminar-timing-btns-wrapper .labl>input+div{
+        width: 60% !important;
     }
 
 }
