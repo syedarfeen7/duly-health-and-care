@@ -203,7 +203,6 @@ export default function SeminarDetailForm() {
                                     </div>
                                 </>
                             }
-
                         </Grid>
                         <div className="seminar-type-wrapper seminar-day-wrapper">
                             <h1 className="font-blue font-weight-700">Select Your Seminar Day</h1>
