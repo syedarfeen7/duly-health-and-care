@@ -13,7 +13,8 @@
 .seminar-location-wrapper {
     margin-top: 2rem;
     margin-left: 3rem;
-    max-width: 70%;
+    margin-right: 3rem;
+    max-width: 100%;
 }
 
 .seminar-location-wrapper h3 {
@@ -49,7 +50,9 @@
 
 .medicare-wrapper p {
     font-size: 18px;
-    margin-top: 2rem;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #00A5DF;
 }
 
 .medicare-plan-wrapper p {
