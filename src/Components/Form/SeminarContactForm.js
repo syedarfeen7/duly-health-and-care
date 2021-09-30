@@ -4,11 +4,14 @@ import '../../Style/Form/style.css';
 import '../../Style/GeneralizeStyle/style.css';
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router";
 import { seminarContactDetailsScheema } from '../../Helper/Validator/validation';
 import { ApplicantRegisteration } from '../../Store/Actions/applicantAction';
 export default function SeminarContactForm() {
-    const seminarDetails = useSelector(state => state.applicant_seminar_details)
     const dispatch = useDispatch()
+    const location = useLocation()
+    const seminarDetails = location.state.data
+    console.log(seminarDetails)
     useEffect(() => {
         gettingSeminarDetailsFromStore()
     }, [])

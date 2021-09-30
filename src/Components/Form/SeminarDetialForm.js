@@ -93,7 +93,7 @@ export default function SeminarDetailForm() {
 
                 dispatch(ApplicantSeminarDetails(res))
                 if (seminarType === "Online") {
-                    history.push('/duly-register')
+                    history.push({pathname: '/duly-register', state:{data: data}})
                 }
 
             })
@@ -107,7 +107,7 @@ export default function SeminarDetailForm() {
         if (seminarType === "In-Person Seminar") {
             await seminarLocationScheema.strict().validate({ seminarLocation })
                 .then(res => {
-                    history.push('/duly-register')
+                    history.push({pathname: '/duly-register', state:{data: data}})
                 })
                 .catch(err => {
                     console.log(err.path)

@@ -21,16 +21,7 @@ export default function HeroSection() {
                         at 1−855−205−2037 to sched­ule an appoint­ment with a licensed advisor.</p>
                 </div>
 
-                <div className="medicare-plan-wrapper">
-                    <p className="font-weight-700 font-grey">In eval­u­at­ing a Medicare plan, con­sid­er the following:</p>
-                    <ul className="medicare-plan-points">
-                        <li className="font-weight-700 font-grey"> How impor­tant is it to con­tin­ue see­ing my pri­ma­ry care physician?</li>
-                        <li className="font-weight-700 font-grey"> Are my pre­scrip­tions covered?</li>
-                        <li className="font-weight-700 font-grey"> Is my pre­ferred phar­ma­cy in-network?</li>
-                        <li className="font-weight-700 font-grey"> Can I get the care I want for a cost I can afford?</li>
-                        <li className="font-weight-700 font-grey"> Does this plan include the ben­e­fits that are most importnat to me?</li>
-                    </ul>
-                </div>
+               
             </Grid>
             <Grid item xl={6} lg={6} md={6} sm={12} xs={12}>
                 <div className="seminar-location-wrapper hide-grid">
